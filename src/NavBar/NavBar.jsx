@@ -13,7 +13,7 @@ export default function NavBar() {
     <>
       <HStack px={25} py={25} justifyContent={"space-between"}>
         <Image
-          src="src/assets/RichieLogo.png"
+          src="src/assets/logo_pizza.png"
           height={"50px"}
           marginRight={"10px"}
         />
