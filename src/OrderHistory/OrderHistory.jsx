@@ -21,6 +21,7 @@ import {
 
 export default function OrderHistory() {
   const getOrderData = useSelector((state) => state.pizza.orderPlace);
+  
 
   // Sort the getOrderData array based on orderId in descending order
   const sortedOrderData = getOrderData
@@ -67,7 +68,9 @@ export default function OrderHistory() {
                               <Th>{item.pizzaName}</Th>
                               <Th>{item.quantity}</Th>
                               <Th>{item.notes}</Th>
-                              <Th isNumeric>{item.price}</Th>
+                              <Th isNumeric>{`${
+                                item.price * item.quantity
+                              }`}</Th>
                             </Tr>
                           ))}
                       </Tbody>
