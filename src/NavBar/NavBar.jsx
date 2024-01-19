@@ -41,7 +41,7 @@ export default function NavBar() {
             height={"40px"}
             marginRight={"10px"}
           />
-          {/* <p>Richie Martin </p> */}
+          <p>Hello User! </p>
         </HStack>
       </HStack>
     </>
