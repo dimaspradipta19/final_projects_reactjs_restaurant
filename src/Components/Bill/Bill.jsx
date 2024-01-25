@@ -21,8 +21,8 @@ import {
 export default function Bill() {
   const dispatch = useDispatch();
   const getCartData = useSelector((state) => state.pizza.cartData);
-  const price = getCartData.reduce((acc, pizza) => {
-    const itemTotalPrice = pizza.price * pizza.quantity;
+  const price = getCartData.reduce((acc, remboelan) => {
+    const itemTotalPrice = remboelan.price * remboelan.quantity;
     return acc + itemTotalPrice;
   }, 0);
 

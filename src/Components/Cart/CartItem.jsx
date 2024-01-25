@@ -15,7 +15,7 @@ import { storeCartData, deleteCartData } from "../../Data/Redux/ReduxSlices";
 import { rupiah } from "../../utils/currencyConvert";
 
 export default function CartItem({ item }) {
-  const itemName = item.pizzaName;
+  const itemName = item.remboelanName;
   const itemQty = item.quantity;
   const itemPrice = item.price;
   const itemNotes = item.notes;
@@ -26,7 +26,7 @@ export default function CartItem({ item }) {
 
   const addItemQty = (name) => {
     const newCartData = getCartData.map((data) => {
-      if (data.pizzaName == name) {
+      if (data.remboelanName == name) {
         let currentQty = data.quantity;
         return { ...data, quantity: (currentQty += 1) };
       }
@@ -39,7 +39,7 @@ export default function CartItem({ item }) {
 
   const reduceItemQty = (name) => {
     const newCartData = getCartData.map((data) => {
-      if (data.pizzaName == name) {
+      if (data.remboelanName == name) {
         let currentQty = data.quantity;
         return { ...data, quantity: currentQty - 1 };
       } else {
@@ -52,7 +52,7 @@ export default function CartItem({ item }) {
 
   const addNotes = (event) => {
     const newCartData = getCartData.map((data) => {
-      if (data.pizzaName == itemName) {
+      if (data.remboelanName == itemName) {
         return { ...data, notes: event.target.value };
       }
 
@@ -83,7 +83,7 @@ export default function CartItem({ item }) {
             <Text pt="2" fontSize="sm">
               {itemQty}
             </Text>
-            <Button colorScheme="blue" onClick={() => addItemQty(itemName)}>
+            <Button colorScheme="green" onClick={() => addItemQty(itemName)}>
               +
             </Button>
           </HStack>

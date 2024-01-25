@@ -18,9 +18,9 @@ export default function ProductCard({ cardContent }) {
   const dispatch = useDispatch();
   const getCartData = useSelector((state) => state.pizza.cartData);
 
-  const addToCart = (pizzaName, quantity, price) => {
+  const addToCart = (remboelanName, quantity, price) => {
     const existingItem = getCartData.find(
-      (item) => item.pizzaName === pizzaName
+      (item) => item.remboelanName === remboelanName
     );
 
     if (existingItem) {
@@ -30,7 +30,7 @@ export default function ProductCard({ cardContent }) {
     } else {
       // If item doesn't exist, add it to the cart:
       const newItem = {
-        pizzaName,
+        remboelanName,
         quantity,
         price,
         notes: "",
@@ -53,23 +53,23 @@ export default function ProductCard({ cardContent }) {
           />
         </Stack>
         <Stack mt="6" spacing="3">
-          <Heading size="md">{cardContent.pizzaName}</Heading>
-          <Text>{cardContent.pizzaDescription}</Text>
+          <Heading size="md">{cardContent.remboelanName}</Heading>
+          <Text>{cardContent.remboelanDescription}</Text>
         </Stack>
       </CardBody>
       <CardFooter width="100%">
         <VStack width="100%">
           <Text color="red.600" fontSize="2xl" fontWeight="bold" mb={5}>
-            {rupiah(cardContent.pizzaPrice)}
+            {rupiah(cardContent.remboelanPrice)}
           </Text>
           <Button
             width="100%"
             colorScheme="blue"
             onClick={() =>
               addToCart(
-                cardContent.pizzaName,
+                cardContent.remboelanName,
                 1,
-                cardContent.pizzaPrice,
+                cardContent.remboelanPrice,
                 cardContent.img
               )
             }

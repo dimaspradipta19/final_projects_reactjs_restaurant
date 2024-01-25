@@ -80,7 +80,7 @@ export default function OrderHistory() {
                         {data.cartData // Create a new array before sorting
                           .map((item) => (
                             <Tr key={item.id}>
-                              <Td>{item.pizzaName}</Td>
+                              <Td>{item.remboelanName}</Td>
                               <Td>{item.quantity}</Td>
                               <Td>{item.notes}</Td>
                               <Td isNumeric>{`${rupiah(

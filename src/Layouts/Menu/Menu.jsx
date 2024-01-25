@@ -9,71 +9,71 @@ export default function Menu() {
   const remboelanData = [
     {
       img: "https://www.remboelan.com/thumb/menu/1602773687.jpg",
-      pizzaName: "Bihun Kampung Gunung Tidar",
-      pizzaPrice: 59000,
-      pizzaDescription: "House special fried rice noodle",
+      remboelanName: "Bihun Kampung Gunung Tidar",
+      remboelanPrice: 59000,
+      remboelanDescription: "House special fried rice noodle",
     },
     {
       img: "https://www.remboelan.com/images/menu/1602407195.jpg",
-      pizzaName: "Lontong Cap Gomeh",
-      pizzaPrice: 80000,
-      pizzaDescription:
+      remboelanName: "Lontong Cap Gomeh",
+      remboelanPrice: 80000,
+      remboelanDescription:
         " Rice cake topped with chili bamboo shoot, sambal goreng ati, sweet slow cooked chicken, shredded chicken, serundeng, server with coconut chicken broth",
     },
     {
       img: "https://www.remboelan.com/thumb/menu/1602407254.jpg",
-      pizzaName: "Mie Goreng Remboelan",
-      pizzaPrice: 120000,
-      pizzaDescription:
+      remboelanName: "Mie Goreng Remboelan",
+      remboelanPrice: 120000,
+      remboelanDescription:
         "House special fried noodle served with pickles and prawn crackers",
     },
     {
       img: "https://www.remboelan.com/thumb/menu/1602407272.jpg",
-      pizzaName: "Mie Rebus Pesisiran",
-      pizzaPrice: 56000,
-      pizzaDescription:
+      remboelanName: "Mie Rebus Pesisiran",
+      remboelanPrice: 56000,
+      remboelanDescription:
         "House special chicken noodle with special gravy sauce, served with pickles and prawn crackers",
     },
     {
       img: "https://www.remboelan.com/images/menu/1602406786.jpg",
-      pizzaName: "Nasi Bakar Tongkol Asap Cabe Hijau",
-      pizzaPrice: 90000,
-      pizzaDescription:
+      remboelanName: "Nasi Bakar Tongkol Asap Cabe Hijau",
+      remboelanPrice: 90000,
+      remboelanDescription:
         "Grilled lemon grass frangrance rice, wraped in banana leaf, stuffed with smoked Tongkol fish, house special balado ijo, and cassava leaves",
     },
     {
       img: "https://www.remboelan.com/images/menu/1602407314.jpg",
-      pizzaName: "Nasi Goreng Remboelan",
-      pizzaPrice: 125000,
-      pizzaDescription:
+      remboelanName: "Nasi Goreng Remboelan",
+      remboelanPrice: 125000,
+      remboelanDescription:
         "House special fried rice cooked with house special smoked stingray and house made herbs, served with pickles and crackers",
     },
     {
       img: "https://www.remboelan.com/thumb/menu/1602407176.jpg",
-      pizzaName: "Nasi Liwet",
-      pizzaPrice: 100000,
-      pizzaDescription:
+      remboelanName: "Nasi Liwet",
+      remboelanPrice: 100000,
+      remboelanDescription:
         "Coconut rice with combination of shredded chicken, Pindang egg, sweetened bean curd, and vegetables squash",
     },
     {
       img: "https://www.remboelan.com/images/menu/1602407101.jpg",
-      pizzaName: "Nasi Langgi",
-      pizzaPrice: 325000,
-      pizzaDescription:
+      remboelanName: "Nasi Langgi",
+      remboelanPrice: 325000,
+      remboelanDescription:
         "White rice with combination of kering tempeh, green bean, glass noodle, shredded chicken, potato fritter, pindang egg, and serundeng",
     },
     {
       img: "https://www.remboelan.com/images/menu/1602407218.jpg",
-      pizzaName: "Nasi Opor Sambal Goreng",
-      pizzaPrice: 40000,
-      pizzaDescription:
+      remboelanName: "Nasi Opor Sambal Goreng",
+      remboelanPrice: 40000,
+      remboelanDescription:
         "White rice topped with coconut chicken stew and chilly chicken liver and gizzard",
     },
     {
       img: "https://www.remboelan.com/images/menu/1602407355.jpg",
-      pizzaName: "Nasi Goreng Kambing Menteng",
-      pizzaPrice: 75000,
-      pizzaDescription:
+      remboelanName: "Nasi Goreng Kambing Menteng",
+      remboelanPrice: 75000,
+      remboelanDescription:
         "Lamb fried rice with hint of cloces, served with melinjo crackers, and pickles",
     },
   ];
@@ -81,7 +81,7 @@ export default function Menu() {
     <SimpleGrid columns={3} spacing={5} w="75vw">
       {remboelanData
         .filter((data) =>
-          data.pizzaName.toLowerCase().includes(getSearchKeyword.toLowerCase())
+          data.remboelanName.toLowerCase().includes(getSearchKeyword.toLowerCase())
         )
         .map((pizza, index) => (
           <Box key={index}>
