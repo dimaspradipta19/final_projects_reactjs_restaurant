@@ -15,13 +15,13 @@ export default function NavBar() {
       <HStack px={25} py={2} justifyContent={"space-between"}>
         <Image src={imgSource1} height={"70px"} marginRight={"10px"} />
         <Input
-          placeholder="Search for your favorite TG-Pizza!"
+          placeholder="Search for traditional food from Indonesia!"
           width={"50%"}
           onChange={(e) => dispatch(storeSearchKeyword(e.target.value))}
         ></Input>
 
         <HStack>
-          <Button colorScheme="orange">
+          <Button backgroundColor={"#9736D9"}>
             <ReactRouterLink style={{ color: "white" }} to="/history">
               Order History
             </ReactRouterLink>

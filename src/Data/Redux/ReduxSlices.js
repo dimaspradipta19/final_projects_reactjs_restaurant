@@ -17,7 +17,7 @@ export const pizzaSlice = createSlice({
     },
     deleteCartData: (state, action) => {
       state.cartData = state.cartData.filter(
-        (cart) => cart.pizzaName !== action.payload
+        (cart) => cart.remboelanName !== action.payload
       );
     },
     storeSearchKeyword: (state, action) => {

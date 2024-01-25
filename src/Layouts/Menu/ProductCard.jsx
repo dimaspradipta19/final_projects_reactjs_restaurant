@@ -64,7 +64,8 @@ export default function ProductCard({ cardContent }) {
           </Text>
           <Button
             width="100%"
-            colorScheme="blue"
+            backgroundColor={"#9736D9"}
+            color={"white"}
             onClick={() =>
               addToCart(
                 cardContent.remboelanName,
