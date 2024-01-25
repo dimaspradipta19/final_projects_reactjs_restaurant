@@ -42,7 +42,8 @@ export default function ProductCard({ cardContent }) {
 
   return (
     <Card maxW="sm" height="100%">
-      <CardBody>
+      <CardBody
+      backgroundColor={"#F8F8F8"}>
         <Stack>
           <Image
             width="100%" // Ensure image fills the HStack for proper centering
@@ -50,6 +51,7 @@ export default function ProductCard({ cardContent }) {
             src={cardContent.img}
             alt="Green double couch with wooden legs"
             borderRadius="lg"
+            backgroundColor={"#F8F8F8"}
           />
         </Stack>
         <Stack mt="6" spacing="3">
@@ -57,7 +59,7 @@ export default function ProductCard({ cardContent }) {
           <Text>{cardContent.remboelanDescription}</Text>
         </Stack>
       </CardBody>
-      <CardFooter width="100%">
+      <CardFooter width="100%" backgroundColor={"#F8F8F8"}>
         <VStack width="100%">
           <Text color="red.600" fontSize="2xl" fontWeight="bold" mb={5}>
             {rupiah(cardContent.remboelanPrice)}
