@@ -37,7 +37,8 @@ export default function OrderHistory() {
         <Button
           leftIcon={<ArrowBackIcon />}
           alignSelf={"flex-start"}
-          colorScheme="red"
+          backgroundColor={"#9736D9"}
+          color={"white"}
         >
           <ReactRouterLink style={{ color: "white" }} to="/">
             Back to menu
