@@ -1,9 +1,8 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import {
   Box,
   Heading,
   Text,
-  Flex,
   Button,
   Image,
   HStack,
@@ -12,16 +11,16 @@ import {
 } from "@chakra-ui/react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { storeCartData, deleteCartData } from "../Redux/ReduxSlices";
-import { rupiah } from "../utils/currencyConvert";
+import { storeCartData, deleteCartData } from "../../Data/Redux/ReduxSlices";
+import { rupiah } from "../../utils/currencyConvert";
 
 export default function CartItem({ item }) {
-  const itemName = item.pizzaName 
-  const itemQty = item.quantity 
-  const itemPrice = item.price
-  const itemNotes = item.notes
-  const itemImage = ""
-  
+  const itemName = item.pizzaName;
+  const itemQty = item.quantity;
+  const itemPrice = item.price;
+  const itemNotes = item.notes;
+  const itemImage = "";
+
   const dispatch = useDispatch();
   const getCartData = useSelector((state) => state.pizza.cartData);
 
@@ -41,16 +40,14 @@ export default function CartItem({ item }) {
   const reduceItemQty = (name) => {
     const newCartData = getCartData.map((data) => {
       if (data.pizzaName == name) {
-          let currentQty = data.quantity;
-          return { ...data, quantity: currentQty - 1 };
-        } else {
-          return data;
-        }
+        let currentQty = data.quantity;
+        return { ...data, quantity: currentQty - 1 };
+      } else {
+        return data;
+      }
     });
 
-    dispatch(storeCartData(newCartData.filter(data =>
-      data.quantity > 0
-    )));
+    dispatch(storeCartData(newCartData.filter((data) => data.quantity > 0)));
   };
 
   const addNotes = (event) => {
@@ -92,7 +89,13 @@ export default function CartItem({ item }) {
           </HStack>
         </HStack>
       </Center>
-      <Input type="textarea" placeholder="Notes" size={"sm"} onChange={addNotes} value={itemNotes} />
+      <Input
+        type="textarea"
+        placeholder="Notes"
+        size={"sm"}
+        onChange={addNotes}
+        value={itemNotes}
+      />
     </Box>
   );
 }

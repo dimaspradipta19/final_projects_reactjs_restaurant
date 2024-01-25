@@ -1,9 +1,9 @@
 import { Flex, Stack } from "@chakra-ui/react";
 import "./App.css";
-import Cart from "./Cart/Cart";
-import Menu from "./Menu/Menu";
-import Bill from "./Bill/Bill";
-import NavBar from "./NavBar/NavBar";
+import Cart from "./Components/Cart/Cart";
+import Menu from "./Layouts/Menu/Menu";
+import Bill from "./Components/Bill/Bill";
+import NavBar from "./Components/NavBar/NavBar";
 
 function App() {
   return (

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useSelector, useDispatch } from "react-redux";
 import {
   Card,
@@ -10,8 +11,8 @@ import {
   Image,
   VStack,
 } from "@chakra-ui/react";
-import { storeCartData } from "../Redux/ReduxSlices";
-import { rupiah } from "../utils/currencyConvert";
+import { storeCartData } from "../../Data/Redux/ReduxSlices";
+import { rupiah } from "../../utils/currencyConvert";
 
 export default function ProductCard({ cardContent }) {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ export default function ProductCard({ cardContent }) {
 
     if (existingItem) {
       // If item already exists, increment its quantity:
+
       return;
     } else {
       // If item doesn't exist, add it to the cart:

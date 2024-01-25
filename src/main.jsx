@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Provider } from "react-redux";
-import { store } from "./Redux/Store.js";
+import { store } from "./Data/Redux/Store.js";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import OrderHistory from "./OrderHistory/OrderHistory.jsx";
+import OrderHistory from "./Layouts/OrderHistory/OrderHistory.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +15,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/history",
-    element: <OrderHistory />
-  }
+    element: <OrderHistory />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
